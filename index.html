@@ -1,154 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Developer Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>Eleni Panagiotopoulou</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       margin: 0;
-      font-family: TIME NEW ROMAN;
-      background:#8CC7CF;
-      color: #BF7167;
-      line-height: 1.9;
+      font-family: Arial, sans-serif;
+      background: #5AAE70;
+      color: #D9DF29;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      font-size: 20px;
     }
 
-    .container {
-      width: 90%;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px;
+    .card {
+      width: 100%;
+      max-width: 950px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 50px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+      border: 1px solid rgba(255,255,255,0.25);
     }
 
     header {
       text-align: center;
-      padding: 50px;
     }
 
     h1 {
+      font-size: 42px;
       margin-bottom: 5px;
     }
 
     .subtitle {
-      color: #6789BF;
+      font-size: 22px;
+      margin-bottom: 8px;
     }
 
     .tagline {
-      margin-top: 10px;
-      color: #cbd5f5;
-    }
-
-    section {
-      margin-top: 40px;
+      font-size: 20px;
+      opacity: 0.9;
     }
 
     h2 {
-      border-bottom: 1px solid #B5BF67;
-      padding-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      background: linear-gradient(90deg, #D9DF29, #FFF9C4);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
-    ul {
-      padding-left: 20px;
+    p {
+      line-height: 1.9;
     }
 
-    li {
-      margin-bottom: 10px;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
     }
 
-    a {
-      color: #66696B;
-      text-decoration: none;
+    .skill-box {
+      background: rgba(255,255,255,0.12);
+      padding: 14px;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 20px;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: default;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .skill-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
 
-    /* Simple link list (no flexbox) */
-    .links {
-      margin-top: 15px;
+    .soft-skills {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .soft-skill {
+      background: rgba(255,255,255,0.12);
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 18px;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .soft-skill:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .social-links {
+      margin-top: 20px;
       text-align: center;
     }
 
-    .link-pill {
+    .social-links a {
       display: inline-block;
-      padding: 5px 15;
-      margin: 5px;
-      border-radius: 20px;
-      border: 1px solid #1f2937;
-      font-size: 14px;
+      margin: 0 10px;
+      color: #D9DF29;
+      font-size: 22px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: #FFF9C4;
     }
 
     footer {
       text-align: center;
-      margin-top: 40px;
-      color: #6b7280;
-      font-size: 14px;
-      padding-bottom: 20px;
+      margin-top: 45px;
+      font-size: 18px;
+      opacity: 0.85;
     }
 
-    /* Simple image styling */
-    .project-img {
-      margin-top: 8px;
-      width: 300px;
-      border: 1px solid #404142;
+    @media(max-width: 600px){
+      body { font-size: 18px; }
+      h1 { font-size: 36px; }
+      h2 { font-size: 24px; }
+      .subtitle { font-size: 20px; }
+      .tagline { font-size: 18px; }
+      .soft-skills { justify-content: center; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <div class="card">
     
     <header>
       <h1>Eleni Panagiotopoulou</h1>
-      <p class="subtitle">Full-Stack Developer • JavaScript • Java • C#• C++</p>
-      <p class="tagline">I build clean, simple web applications focused on performance and great UX.</p>
+      <p class="subtitle">Front-End Developer • Web Designer</p>
+      <p class="tagline">Creating minimal, responsive, and pastel-themed web experiences.</p>
+      <div class="social-links">
+        <a href="https://github.com/elenipanagiotopoulou" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/eleni-panagiotopoulou-04a908150/" target="_blank">LinkedIn</a>
+      </div>
     </header>
 
     <section>
-      <h2>About</h2>
+      <h2>About Me</h2>
       <p>
-        I'm a developer specializing in building modern web applications. I enjoy working with
-        JavaScript, HTML,CSS, and C++ and I'm always learning new tools and technologies.
+        I am a Front-End Developer and Web Designer with experience in creating clean, minimal, and user‑friendly digital experiences. 
+        I also have skills in 3D design with Blender and backend technologies like MySQL and MongoDB — enabling full‑stack thinking.
       </p>
     </section>
 
     <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Languages: JavaScript, C++, HTML, CSS</li>
-        <li>Frontend: React, Next.js</li>
-        <li>Backend: Node.js, Express, REST APIs</li>
-        <li>Tools: Git, GitHub, Docker</li>
-      </ul>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-box">C</div>
+        <div class="skill-box">C++</div>
+        <div class="skill-box">Java</div>
+        <div class="skill-box">JavaScript</div>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">MySQL</div>
+        <div class="skill-box">MongoDB</div>
+        <div class="skill-box">Blender</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Soft Skills</h2>
+      <div class="soft-skills">
+        <div class="soft-skill">Teamwork</div>
+        <div class="soft-skill">Motivation</div>
+        <div class="soft-skill">Creativity</div>
+        <div class="soft-skill">Problem Solving</div>
+        <div class="soft-skill">Adaptability</div>
+        <div class="soft-skill">Attention to Detail</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education & Thesis</h2>
+      <p>
+        🎓 <strong>Bachelor’s Degree in Cultural Heritage Management & New Technologies</strong><br>
+        University of Patras
+      </p>
+      <p>
+        Bachelor’s Thesis: <strong>Augmented Reality project using Zappar</strong>
+      </p>
+      <p>
+        Languages: English (basic)
+      </p>
     </section>
 
     <section>
       <h2>Projects</h2>
-      <ul>
+      <ul class="projects-list">
         <li>
-          <strong>Project One</strong> – Simple description.
-          <br>
-          <img src="img1.jpg" class="project-img">
-        </li>
-
-        <li>
-          <strong>Project Two</strong> – Another description.
-          <br>
-          <img src="img2.jpg" class="project-img">
-        </li>
-
-        <li>
-          <strong>Project Three</strong> – Add more as needed.
-          <br>
-          <img src="img3.jpg" class="project-img">
+          <strong>Coming Soon</strong> – New projects will be added soon.
         </li>
       </ul>
     </section>
 
+    <section>
+      <h2>Contact</h2>
+      <p>Phone: <a href="tel:+306973450066" style="color:#D9DF29;">+30 697 345 0066</a></p>
+      <p>Email: <a href="mailto:elenh.panagiotopoulou@hotmail.com" style="color:#D9DF29;">elenh.panagiotopoulou@hotmail.com</a></p>
+    </section>
+
     <footer>
-      © 2025 ELENH PANAGIOTOPOULOU. All rights reserved.
+      © 2025 Eleni Panagiotopoulou
     </footer>
 
   </div>
+
 </body>
 </html>
